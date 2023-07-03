@@ -1,0 +1,60 @@
+{% extends 'other_pages/header.html' %}
+{% block title %} HOME {% endblock title %}
+	
+{% block content %}
+
+<div class="app-wrapper">
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">
+            <div class="row g-0 app-auth-wrapper">
+                <div class="col-12 col-md-12 col-lg-12 auth-main-col text-center p-5">
+                    <div class="d-flex flex-column align-content-end">
+                        <div class="col-md-12" >	
+                            <h2 class="auth-heading text-center mb-4">ADD API Endpoints</h2>
+                            <p>Please input your desired API details</p>					
+                            <div class="">
+                                <form class="">
+                                    <div class="email mb-3">
+                                        <label class="sr-only" for="api_key">API KEY</label> 
+                                        <input id="api_key" name="api_key" type="text" class="form-control" placeholder="API KEY" required="required">
+                                    </div>
+                                    <div class="email mb-3">
+                                        <label class="sr-only" for="api_value">API VALUE</label>
+                                        <input id="api_value" name="api_value" type="text" class="form-control" placeholder="API VALUE" required="required">
+                                    </div>  
+                                    <div class="email mb-3">
+                                        <label class="sr-only" for="api_details">API DETAILS (PURPOSES)</label> 
+                                        <input id="api_details" name="api_details" type="text" class="form-control" placeholder="API DETAILS (Purposes like Get all Product, Get all Category, etc)" required="required">
+                                    </div>
+                                    <div class="email mb-3">
+                                        <label class="sr-only" for="api_url">API URL</label>
+                                        <input id="api_url" name="api_url" type="text" class="form-control" placeholder="API Endpoints URL" required="required">
+                                    </div>
+                                    <div class="email mb-3">
+                                        <select id="api_type" name="api_type" type="text" class="form-control" placeholder="API type" required="required">
+                                            <option selected> Select API Type</option>
+                                            <option value="get">GET</option>
+                                            <option value="post">POST</option>
+                                            <option value="patch">PATCH</option>
+                                            <option value="patch">DELETE</option>
+                                        </select>
+                                    </div>
+                                    <div class="email mb-3">
+                                        <label class="sr-only" for="request_body">Request Body</label>
+                                        <input id="request_body" name="request_body" type="text" class="form-control" placeholder="Request Body" required="required">
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">ADD NOW</button>
+                                    </div>
+                                </form><!--//auth-form-->
+                            </div><!--//auth-form-container-->	
+                        </div><!--//auth-body-->
+                    </div><!--//flex-column-->   
+                </div><!--//auth-main-col-->			    
+            </div><!--//row-->
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

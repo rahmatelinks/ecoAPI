@@ -1,0 +1,68 @@
+{% extends 'other_pages/header.html' %}
+{% block title %} HOME {% endblock title %}
+	
+{% block content %}
+<div class="app-wrapper">
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">
+            <div class="row g-0 app-auth-wrapper">
+                <div class="col-12 col-md-12 col-lg-12 auth-main-col text-center p-5">
+                    <div class="d-flex flex-column align-content-end">
+                        <div class="col-md-12" >	
+                            <h2 class="auth-heading text-center mb-4">API Endpoints Details</h2>
+                            <p>Your desired API details in below</p>					
+                            <div class="">
+                                <div class="app-card app-card-orders-table shadow-sm mb-5">
+                                    <div class="app-card-body">
+                                        <div class="table-responsive">
+                                            
+                                            <table class="table app-table-hover mb-0 text-left" style="text-align: left;">
+                                                {% for th in final_api %}
+                                                <tr>
+                                                    <th>ID - </th>
+                                                    <th>{{th.id}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>API SL - </th>
+                                                    <th>{{th.apisl}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>API KEY - </th>
+                                                    <th>{{th.apikey}}</th>
+                                                </tr> 
+                                                <tr>
+                                                    <th>API VALUE - </th>
+                                                    <th>{{th.api_value}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>API DETAILS - </th>
+                                                    <th>{{th.api_details}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>API Endpoints URL - </th>
+                                                    <th>{{th.api_url}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>API type - </th>
+                                                    <th>{{th.api_type}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Request Body - </th>
+                                                    <th>{{th.request_body}}</th>
+                                                </tr>
+                                                {% endfor %}
+                                            </table>
+                                        </div><!--//table-responsive-->
+                                       
+                                    </div><!--//app-card-body-->		
+                                </div><!--//app-card-->
+                                
+                            </div><!--//auth-form-container-->	
+                        </div><!--//auth-body-->
+                    </div><!--//flex-column-->   
+                </div><!--//auth-main-col-->			    
+            </div><!--//row-->
+        </div>
+    </div>
+</div>
+{% endblock content %}
